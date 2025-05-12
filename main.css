@@ -1,0 +1,530 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Special Gothic Expanded One', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка */
+.header {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('../img/header/bg-pedals.jpg') center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.header-title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.header-subtitle {
+    font-size: 1.5rem;
+    color: #ff4d4d;
+    letter-spacing: 2px;
+}
+
+.header-arrow {
+    position: absolute;
+    bottom: 30px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.header-arrow:hover {
+    transform: translateY(10px);
+}
+
+/* О нас */
+.about {
+    padding: 4rem 0;
+    background: #fff;
+}
+
+.about h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.features {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.feature {
+    padding: 1.5rem;
+    background: #f8f8f8;
+    border-radius: 10px;
+    border-left: 4px solid #ff4d4d;
+}
+
+/* Каталог */
+.products {
+    padding: 5rem 0;
+    background: #f5f5f5;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.product-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.price {
+    color: #ff4d4d;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+.order-btn {
+    display: inline-block;
+    background: #ff4d4d;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.order-btn:hover {
+    background: #ff3333;
+}
+
+/* Модальные окна */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: none;
+    z-index: 1000;
+}
+
+.modal:target {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    color: #ff4d4d;
+    text-decoration: none;
+    line-height: 1;
+}
+
+.order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.order-form input,
+.order-form select,
+.order-form textarea {
+    padding: 0.8rem;
+    border: 2px solid #eee;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.order-form button {
+    background: #ff4d4d;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s;
+}
+
+.order-form button:hover {
+    background: #ff3333;
+}
+
+.color-select {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+/* Футер */
+footer {
+    background: #1a1a1a;
+    color: white;
+    padding: 3rem 0;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.social-links img {
+    width: 35px;
+    transition: transform 0.3s;
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 2.5rem;
+    }
+    
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+}
+
+/* Навигация */
+.main-nav {
+    background: #1a1a1a;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 2rem;
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: #ff4d4d;
+}
+
+/* Преимущества */
+.advantages {
+    padding: 3rem 0;
+    background: #f8f8f8;
+}
+
+.advantage-card {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Фильтры */
+.filters {
+    padding: 2rem 0;
+    background: white;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Отзывы */
+.reviews {
+    padding: 4rem 0;
+    background: #fff;
+}
+
+.review-card {
+    padding: 1.5rem;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.review-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+/* Корзина */
+.cart-preview {
+    position: fixed;
+    top: 20%;
+    right: 2rem;
+    background: white;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    width: 300px;
+    display: none;
+}
+
+.checkout-btn {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .main-nav {
+        text-align: center;
+    }
+    
+    .main-nav a {
+        display: block;
+        margin: 0.5rem 0;
+    }
+    
+    .cart-preview {
+        width: 90%;
+        right: 5%;
+        bottom: 1rem;
+        top: auto;
+    }
+}
+
+/* Страница "О нас" */
+.page-header {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                url('../img/header/bg-about.jpg') center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 4rem;
+}
+
+.page-header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.history-content img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin: 4rem 0;
+}
+
+.member {
+    text-align: center;
+    padding: 2rem;
+    background: #f8f8f8;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.member:hover {
+    transform: translateY(-5px);
+}
+
+.member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.principles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.principle {
+    text-align: center;
+    padding: 2rem;
+}
+
+.principle img {
+    width: 80px;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .history-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .principles-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+}
+
+* Контакты */
+#contacts {
+    padding: 4rem 0;
+    background: gray; /* Добавим общий серый фон секции */
+}
+
+#contacts h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contacts-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.map {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-info {
+    padding: 2rem;
+    background: gainsboro; /* Сделаем фон контактного блока темнее */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Добавим тень для глубины */
+}
+
+.contact-info h3 {
+    margin-bottom: 1.5rem;
+    color: #ff4d4d;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #ddd; /* Разделительная линия */
+}
+
+.contact-details {
+    margin: 2rem 0;
+}
+
+.contact-details a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.contact-details a:hover {
+    color: #ff4d4d;
+}
+
+.contact-details img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Адаптив для контактов */
+@media (max-width: 768px) {
+    .contacts-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .map {
+        height: 300px;
+    }
+}

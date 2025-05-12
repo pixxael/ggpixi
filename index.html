@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WindBreaker - Fixed Gear Велосипеды</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="main-nav">
+        <div class="container">
+            <a href="#products">Каталог</a>
+            <a href="about.html">О нас</a>
+            <a href="#reviews">Отзывы</a>
+            <a href="#contacts">Контакты</a>
+        </div>
+    </nav>
+
+    <!-- Шапка -->
+    <div class="header">
+        <h1 class="header-title">WindBreaker</h1>
+        <p class="header-subtitle">Это про свободу и скорость</p>
+        <a href="#products" class="header-arrow">
+            <img src="./img/icons/arrow-down.svg" alt="Прокрутить вниз">
+        </a>
+    </div>
+
+    <!-- Раздел "О нас" -->
+    <section class="about">
+        <div class="container">
+            <h2>Философия WindBreaker</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Мы создаем культуру городского движения в Якутске с 2025 года. Каждый велосипед - произведение искусства.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <h3>✓ Бесплатная сборка</h3>
+                            <p>Профессиональная сборка руками опытных мастеров в нашем сервисе</p>
+                        </div>
+                        <div class="feature">
+                            <h3>✓Бесплатный Тест-драйв</h3>
+                            <p>Возможность тестовой поездки перед покупкой абсолютно бесплатно</p>
+                        </div>
+                        <div class="feature">
+                            <h3>✓ Бесплатный тех-осмотр</h3>
+                            <p>Проведем тех-осмотр любых fixed gear велосипедов, а так же закажем детали и запчасти по вашему вкусу</p>
+                        </div>
+                        <div class="feature">
+                            <h3>✓ Годовая гарантия</h3>
+                            <p>При покупке велосипеда у вас будет бесплатная годовая гарантия - полная замена деталей и запчастей, раскачка шин и замена на соответствующую по цене модель</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="./img/about.jpg" alt="Наш магазин">
+            </div>
+        </div>
+    </section>
+
+     <div class="filters">
+        <div class="container">
+            <div class="filter-group">
+                <label>Сортировка:</label>
+                <select>
+                    <option>По цене ↑</option>
+                    <option>По цене ↓</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Каталог товаров -->
+    <div id="products" class="products">
+        <div class="container">
+            <h2>Каталог товаров</h2>
+            <div class="product-grid">
+                
+                <!-- Карточка 1 -->
+                <div class="product-card">
+                    <img src="./img/products/fixie-urban.jpg" alt="Urban Pro 2024">
+                    <h3>Urban Pro 2024</h3>
+                    <p>Алюминиевая рама, вес 9.8 кг</p>
+                    <div class="price">34 990 ₽</div>
+                    <a href="#modal-urban" class="order-btn">Заказать</a>
+                </div>
+
+                <!-- Карточка 2 -->
+                <div class="product-card">
+                    <img src="./img/products/fixie-track.jpg" alt="Track Edition">
+                    <h3>Track Edition</h3>
+                    <p>Карбоновая вилка, трековая втулка</p>
+                    <div class="price">67 990 ₽</div>
+                    <a href="#modal-track" class="order-btn">Заказать</a>
+                </div>
+
+                <!-- Карточка 3 -->
+                <div class="product-card">
+                    <img src="./img/products/accessories-kit.jpg" alt="Стартовый набор">
+                    <h3>Стартовый набор</h3>
+                    <p>Инструменты + защита цепи</p>
+                    <div class="price">5 490 ₽</div>
+                    <a href="#modal-kit" class="order-btn">Заказать</a>
+                </div>
+
+                <!-- Карточка 4 -->
+                <div class="product-card">
+                    <img src="./img/products/wheelset.jpg" alt="Колеса Aerospoke">
+                    <h3>Колеса Aerospoke</h3>
+                    <p>Литые диски, вес 1.8 кг</p>
+                    <div class="price">22 990 ₽</div>
+                    <a href="#modal-wheels" class="order-btn">Заказать</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cart-preview">
+        <h4>Корзина</h4>
+        <div class="cart-items">
+            <!-- Товары будут добавляться здесь -->
+        </div>
+        <button class="checkout-btn">Оформить заказ</button>
+    </div>
+
+     <section id="reviews" class="reviews">
+        <div class="container">
+            <h2>Отзывы клиентов</h2>
+            <div class="review-grid">
+                <div class="review-card">
+                    <img src="./img/users/user1.jpg" alt="Алексей">
+                    <h4>Алексей, 28 лет</h4>
+                    <p>"Лучший магазин велосипедов в Якутске! Профессиональный подход."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="contacts" class="contacts">
+    <div class="container">
+        <h2>Контакты</h2>
+        <div class="contacts-wrapper">
+            <div class="map">
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae7f0b8b7b8d8c8a8a8a8a8a8a8a8a8a8a8a8&amp;lang=ru_RU&amp;scroll=false" 
+                        width="100%" 
+                        height="400" 
+                        frameborder="0"
+                        style="border-radius: 10px;">
+                </iframe>
+            </div>
+            <div class="contact-info">
+                <h3>WindBreaker Store</h3>
+                <p>📍 Якутск, ул. Ярославского, 15</p>
+                <p>🚲 Вход со стороны парковки</p>
+                <p>⏰ Часы работы: ежедневно 10:00-20:00</p>
+                
+                <div class="contact-details">
+                    <a href="tel:+79627377631" class="phone">
+                        <img src="./img/icons/phone.svg" alt="Телефон">
+                        +7 (962) 737-76-31
+                    </a>
+                    <a href="mailto:pixxael@gmail.com" class="email">
+                        <img src="./img/icons/mail.svg" alt="Email">
+                        pixxael@gmail.com
+                    </a>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://t.me/dxnteehighlights" target="_blank">
+                        <img src="./img/icons/Telegram.svg" alt="Telegram">
+                    </a>
+                    <a href="https://vk.com/pixxael" target="_blank">
+                        <img src="./img/icons/VK.svg" alt="VK">
+                    </a>
+                    <a href="https://wa.me/79627377631" target="_blank">
+                        <img src="./img/icons/WhatsApp.svg" alt="WhatsApp">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Модальные окна -->
+    <div id="modal-urban" class="modal">
+        <div class="modal-content">
+            <a href="#close" class="close">&times;</a>
+            <h2>Urban Pro 2024</h2>
+            <form class="order-form">
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="tel" placeholder="Телефон" pattern="[0-9]{10}" required>
+                <label>Размер рамы:
+                    <select>
+                        <option>52 см</option>
+                        <option>54 см</option>
+                        <option>56 см</option>
+                    </select>
+                </label>
+                <button type="submit">Забронировать</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="modal-track" class="modal">
+        <div class="modal-content">
+            <a href="#close" class="close">&times;</a>
+            <h2>Track Edition</h2>
+            <form class="order-form">
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="tel" placeholder="Телефон" required>
+                <label>Цвет:
+                    <select>
+                        <option>Маттовый черный</option>
+                        <option>Белый металлик</option>
+                        <option>Красный</option>
+                    </select>
+                </label>
+                <button type="submit">Оформить заказ</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="modal-kit" class="modal">
+        <div class="modal-content">
+            <a href="#close" class="close">&times;</a>
+            <h2>Стартовый набор</h2>
+            <form class="order-form">
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="email" placeholder="E-mail" required>
+                <textarea placeholder="Комментарий к заказу"></textarea>
+                <button type="submit">Подтвердить</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="modal-wheels" class="modal">
+        <div class="modal-content">
+            <a href="#close" class="close">&times;</a>
+            <h2>Колеса Aerospoke</h2>
+            <form class="order-form">
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="tel" placeholder="Телефон" required>
+                <div class="color-select">
+                    <label><input type="radio" name="color" checked> Черные</label>
+                    <label><input type="radio" name="color"> Серебристые</label>
+                </div>
+                <button type="submit">Купить</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>WindBreaker</h3>
+                    <p>Якутск, ул. Ярославского, 15</p>
+                    <p>+7 (962) 737-76-31</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/pixx4el/profilecard/?igsh=N3M2dDVjaXU0ZzI5"><img src="./img/icons/Instagram.svg" alt="Instagram"></a>
+                    <a href="https://t.me/dxnteehighlights"><img src="./img/icons/Telegram.svg" alt="Telegram"></a>
+                    <a href="https://vk.com/pixxael"><img src="./img/icons/VK.svg" alt="VK"></a>
+                    <a href="https://www.youtube.com"><img src="./img/icons/YouTube.svg" alt="YouTube"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
